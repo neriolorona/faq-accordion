@@ -91,32 +91,31 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.accordion-header:nth-child(1) {
   font-size: 1.3rem;
   color: var(--text-dark-blue)
 }
 
 .accordion-header:hover {
-  cursor: pointer;
   color: var(--soft-red);
 }
 
+.accordion-header.active {
+  font-weight: bold;
+}
+
+.accordion-header-icon.rotate {
+  transform: rotate(180deg);
+}
+
 .accordion-body {
+  display: none;
   width: 90%;
   font-size: 1.2rem;
-  color: var(--text-dark-blue)
+  color: var(--text-dark-blue);
 }
 
-
-.accordion-body p {
-  margin-top: 0;
-}
-
-.accordion-active {
-  font-weight: bold;
-  color: var(--dark-blue)
+.accordion-body.show {
+  display: block;
 }
 
 @media screen and (min-width: 1440px) {
